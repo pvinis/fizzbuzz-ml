@@ -49,3 +49,15 @@ trainExamples = examples.iloc({ rows: [`0:${trainSize}`] , columns: [':'] })
 testExamples = examples.iloc({ rows: [`${trainSize}:${size}`] , columns: [':'] })
 
 // trainExamples.groupby(['fizz', 'buzz']).col(['counts']).count().print()
+
+
+model = tf.sequential({
+	layers: [
+		tf.layers.dense({units: 32, inputDim: 50}),
+	]
+})
+model.compile({optimizer: 'sgd', loss: 'meanSquaredError'})
+await model.fit(tf.ones([8, 50]), tf.ones([8, 32]), {
+	batchSize: 4,
+	epochs: 3
+ })
