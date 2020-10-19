@@ -1,0 +1,11 @@
+{
+  "name": "fizzbuzzml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.6.0",
+    "danfojs-node": "^0.1.5",
+    "lodash": "^4.17.20"
+  }
+}
